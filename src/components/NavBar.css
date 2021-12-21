@@ -1,0 +1,24 @@
+
+
+.logo {
+    width: 10rem;
+    margin-left: 2rem;
+}
+
+.navbar-light .navbar-brand {
+    color: #34b3c7;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(235, 27, 27);
+    margin: 0 2rem;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: rgb(235, 27, 27);
+}
+
+.btn-outline-success {
+    color: #34b3c7;
+    border-color: #34b3c7;
+}
