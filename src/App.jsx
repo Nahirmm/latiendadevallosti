@@ -1,4 +1,5 @@
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +12,7 @@ function App() {
     <div>
 
         <NavBar />
+        <ItemListContainer greeting='Bienvenidxs a la nuestra tienda!' />
     </div>
   );
 

@@ -17,8 +17,3 @@
 .navbar-light .navbar-nav .nav-link.active {
     color: rgb(235, 27, 27);
 }
-
-.btn-outline-success {
-    color: #34b3c7;
-    border-color: #34b3c7;
-}
