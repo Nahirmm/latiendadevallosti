@@ -1,6 +1,6 @@
 import './ItemListContainer.css'
 import ItemList from './ItemList'
-import { useState , useEffect } from 'React'
+import { useState , useEffect } from 'react'
 import { getFetch } from '../../helpers/mock'
 
 
@@ -19,7 +19,7 @@ function ItemListContainer({ greeting }) {
     }, [])
 
     return (
-        <div>
+        <div className='divItemListContainer'>
             <h1 className='saludo'>{greeting}</h1>
             { loading ? <h3>Aguarde unos segundos, en breve se terminará de cargar</h3> : <ItemList productos={productos} /> }
         </div>

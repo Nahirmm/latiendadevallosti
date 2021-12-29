@@ -14,7 +14,6 @@ function App() {
 
         <NavBar />
         <ItemListContainer greeting='Bienvenidxs a la nuestra tienda!' />
-        <ItemCount initial={1} stock={7} />
     </div>
   );
 
