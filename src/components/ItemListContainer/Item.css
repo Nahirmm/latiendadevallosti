@@ -1,12 +1,9 @@
 .divItem {
     width: 20rem;
-    height: 20rem;
+    height: 38rem;
     margin: 1rem 0.125rem;
 }
 
-.cardItem {
-    height: 20rem;
-}
 
 .card-body {
     display: flex;
@@ -22,5 +19,4 @@
     flex-direction: column;
     align-self: center;
 }
-
 

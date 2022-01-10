@@ -9,11 +9,13 @@ function Item({ nombre, imagen, precio, descripcion, stock }) {
 
         <div className="divItem">
             <Card className='cardItem'>
-                <Card.Img variant="top" src="#" alt={imagen} />
+                <Card.Img variant="top" src={imagen} alt={nombre} />
                 <Card.Body>
                     <Card.Title>{nombre}</Card.Title>
                     <Card.Text>
-                        {descripcion}
+                        <p>{descripcion}</p>
+                        <br />
+                        <p>${precio}</p>
                     </Card.Text>
                     <ItemCount stock={stock}/>
                     <div className='divButtonCardItem'>

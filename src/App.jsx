@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './components/ItemListContainer/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -11,9 +12,9 @@ function App() {
   return (
 
     <div>
-
         <NavBar />
-        <ItemListContainer greeting='Bienvenidxs a la nuestra tienda!' />
+        <ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />
+        <ItemDetailContainer />
     </div>
   );
 
