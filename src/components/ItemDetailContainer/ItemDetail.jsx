@@ -10,6 +10,7 @@ function ItemDetail({ producto }) {
             <div>
                 <h2>{producto.nombre}</h2>
                 <p className='pDescripcionDetail'>{producto.descripcion}</p>
+                <p>{producto.patron}</p>
                 <h4 className='precioDetail'>Precio: ${producto.precio}</h4>
                 <ItemCount />
                 <div className='divButtonAgregarAlCarritoDetail'>

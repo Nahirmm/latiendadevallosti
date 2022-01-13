@@ -2,6 +2,7 @@ import './ItemListContainer.css'
 import ItemList from './ItemList'
 import { useState , useEffect } from 'react'
 import { getFetch } from '../../helpers/mock'
+import { useParams } from 'react-router-dom'
 
 
 function ItemListContainer({ greeting }) {
@@ -9,14 +10,27 @@ function ItemListContainer({ greeting }) {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const {categoriaId} = useParams()
 
     useEffect(() => {
-        getFetch
+
+        if (categoriaId) {
+
+            getFetch
+        .then(resp => setProductos(resp => resp.filter(prod => prod.categoria === categoriaId)))
+        .catch(err => console.log(err))
+        .finally(() => setLoading(false))
+
+        } else {
+
+            getFetch
         .then(resp => setProductos(resp))
         .catch(err => console.log(err))
         .finally(() => setLoading(false))
 
-    }, [])
+        }
+
+    }, [categoriaId])
 
     return (
         <div className='divItemListContainer'>

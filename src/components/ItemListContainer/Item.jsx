@@ -2,8 +2,9 @@ import './Item.css';
 import { Card } from "react-bootstrap"
 import { Button } from "react-bootstrap" 
 import ItemCount from "./ItemCount"
+import { Link } from 'react-router-dom'
 
-function Item({ nombre, imagen, precio, descripcion, stock }) {
+function Item({ id, nombre, imagen, precio, descripcion, stock }) {
 
     return (
 
@@ -12,14 +13,12 @@ function Item({ nombre, imagen, precio, descripcion, stock }) {
                 <Card.Img variant="top" src={imagen} alt={nombre} />
                 <Card.Body>
                     <Card.Title>{nombre}</Card.Title>
-                    <Card.Text>
-                        <p>{descripcion}</p>
-                        <br />
-                        <p>${precio}</p>
+                    <Card.Text>                        
+                        <p className='pCardPrecio'>${precio}</p>
                     </Card.Text>
                     <ItemCount stock={stock}/>
                     <div className='divButtonCardItem'>
-                        <Button variant="dark" className='buttonCardItem'>Agregar al carrito</Button>
+                        <Link to={`item/${id}`}><Button variant="dark" className='buttonCardItem'>Detalle del producto</Button></Link>
                     </div>
                 </Card.Body>
             </Card>
