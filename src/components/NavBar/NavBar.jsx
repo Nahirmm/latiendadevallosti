@@ -11,9 +11,9 @@ function NavBar() {
         <div className='divNavBar'>
             <Link to={`/`}><img src={logo} alt="logo" className="logo" /></Link>
             <Link to={`/`} className='tituloNavBar'>La tienda de Vallosti</Link>
-            <NavLink to={`/categoria/animales`} className="navLinkNavBar">Animales</NavLink>
-            <NavLink to={`/categoria/bebes`} className="navLinkNavBar">Bebes</NavLink>
-            <NavLink to={`/categoria/personajes`} className="navLinkNavBar">Personajes</NavLink>
+            <NavLink to={`/categoria/Animales`} className="navLinkNavBar">Animales</NavLink>
+            <NavLink to={`/categoria/Bebes`} className="navLinkNavBar">Bebes</NavLink>
+            <NavLink to={`/categoria/Personajes`} className="navLinkNavBar">Personajes</NavLink>
             <Link to={`/cart`} className='cartNavBar'><CartWidget /></Link>
         </div>
     )

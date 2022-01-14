@@ -18,7 +18,7 @@ function ItemListContainer({ greeting }) {
         if (categoriaId) {
 
             getFetch
-        .then(resp => setProductos(resp => resp.filter(prod => prod.categoria === categoriaId)))
+        .then(answer => setProductos(answer.filter(prod => prod.categoria === categoriaId)))
         .catch(err => console.log(err))
         .finally(() => setLoading(false))
 
