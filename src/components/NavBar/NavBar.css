@@ -1,19 +1,28 @@
+.divNavBar {
+    background-color: #F8F9FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+a {
+    text-decoration: none;
+    color: #212529;
+}
 
 .logo {
     width: 10rem;
     margin-left: 2rem;
 }
 
-.navbar-light .navbar-brand {
-    color: #34b3c7;
+.tituloNavBar {
+    font-size: 2rem;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(235, 27, 27);
+.navLinkNavBar {
     margin: 0 2rem;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-    color: rgb(235, 27, 27);
+.cartNavBar {
+    margin-left: 8rem;
 }

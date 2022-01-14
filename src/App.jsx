@@ -1,21 +1,25 @@
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from './components/ItemListContainer/ItemCount';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart'
 
 
 function App() {
 
   return (
 
-    <div>
+    <BrowserRouter>
         <NavBar />
-        <ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />
-        <ItemDetailContainer />
-    </div>
+        <Routes>
+          <Route exact path='/' element={<ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />} />
+          <Route exact path='/categoria/:categoriaId' element={<ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />} />
+          <Route exact path='/item/:detalleId' element={<ItemDetailContainer />} />
+          <Route exact path='/cart' element={<Cart />} />
+        </Routes>
+    </BrowserRouter>
   );
 
 }

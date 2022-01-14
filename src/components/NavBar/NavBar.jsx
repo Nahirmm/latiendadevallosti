@@ -1,29 +1,21 @@
 import './NavBar.css'
 import logo from '../../assets/logo.png';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+
 import CartWidget from './CartWidget';
+import { Link, NavLink } from 'react-router-dom'
 
 
 function NavBar() {
 
     return (
-        <div>
-            <Navbar bg="light" variant="light">
-                <a href="#inicio"><img src={logo} alt="logo" className="logo" /></a>
-                <Container>
-                    <Navbar.Brand href="#inicio">La tienda de Vallosti</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#inicio">Inicio</Nav.Link>
-                        <Nav.Link href="#galeria">Galeria</Nav.Link>
-                        <Nav.Link href="#tienda">Tienda</Nav.Link>
-                    </Nav>
-                    <CartWidget />
-                </Container>
-            </Navbar>
+        <div className='divNavBar'>
+            <Link to={`/`}><img src={logo} alt="logo" className="logo" /></Link>
+            <Link to={`/`} className='tituloNavBar'>La tienda de Vallosti</Link>
+            <NavLink to={`/categoria/Animales`} className="navLinkNavBar">Animales</NavLink>
+            <NavLink to={`/categoria/Bebes`} className="navLinkNavBar">Bebes</NavLink>
+            <NavLink to={`/categoria/Personajes`} className="navLinkNavBar">Personajes</NavLink>
+            <Link to={`/cart`} className='cartNavBar'><CartWidget /></Link>
         </div>
-
     )
 }
 
