@@ -1,8 +1,18 @@
-import React from 'react'
+import {useState} from 'react'
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemListContainer/ItemCount'
 import './ItemDetail.css';
 
 function ItemDetail({ producto }) {
+
+    const [show, setShow] = useState(true)
+
+    const onAdd = () => {
+
+        setShow(false)
+        
+    }
 
     return (
         <div className='divDetail'>
@@ -12,12 +22,12 @@ function ItemDetail({ producto }) {
                 <p className='pDescripcionDetail'>{producto.descripcion}</p>
                 <p className='pPatronDetail'>{producto.patron}</p>
                 <h4 className='precioDetail'>Precio: ${producto.precio}</h4>
-                <ItemCount />
-                <div className='divButtonAgregarAlCarritoDetail'>
-                    <button className='buttonAgregarAlCarritoDetail'>Agregar al carrito</button>
-                </div>
+                { show ? <ItemCount stock={producto.stock} onAdd={onAdd}/> : 
+                <div className='divButtonsDetail'>
+                    <Link to='/'><Button variant="outline-dark" className='buttonSeguirCompra'>Seguir comprando</Button></Link>
+                    <Link to='/cart'><Button variant="dark" className='buttonTerminarCompra'>Terminar compra</Button></Link>
+                </div>}
             </div>
-            
         </div>
     )
 }

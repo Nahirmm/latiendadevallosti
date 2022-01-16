@@ -5,34 +5,40 @@
 }
 
 .imgDetail {
-    width: 40rem;
-    height: 40rem;
+    width: 38rem;
+    height: 38rem;
     margin-right: 1rem;
 }
 
 .pDescripcionDetail {
-    margin-top: 7rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
     font-size: 1.2rem;
 }
 
 .pPatronDetail {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     font-size: 1.2rem;
 }
 
 .precioDetail {
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
-.divButtonAgregarAlCarritoDetail {
+.divButtonsDetail {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.buttonAgregarAlCarritoDetail {
-    align-items: center;
+.buttonSeguirCompra {
+    margin-bottom: 1rem;
+    width: 11rem;
+}
+
+.buttonTerminarCompra {
+    width: 11rem;
 }
