@@ -25,4 +25,12 @@ a {
 
 .cartNavBar {
     margin-left: 8rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.globoItems {
+    font-size: 1.7rem;
+    margin-left: 0.3rem;
 }
