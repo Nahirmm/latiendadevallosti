@@ -3,7 +3,7 @@ const productos = [
     id: "1",
     categoria: "Animales",
     nombre: "Unicornio",
-    img: "../assets/catalogo/animales/1Unicornio.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314759/laTiendaDeVallosti/Animales/1Unicornio_hqt1nx.jpg",
     precio: 2000,
     descripcion:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -14,7 +14,7 @@ const productos = [
     id: "2",
     categoria: "Animales",
     nombre: "Jirafa articulada",
-    img: "../assets/catalogo/animales/2Jirafa.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314760/laTiendaDeVallosti/Animales/2Jirafa_j8hcdh.jpg",
     precio: 1700,
     descripcion:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -25,7 +25,7 @@ const productos = [
     id: "3",
     categoria: "Animales",
     nombre: "Conejo",
-    img: "../assets/catalogo/animales/3Conejo.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314840/laTiendaDeVallosti/Animales/3Conejo_go0dho.jpg",
     precio: 1100,
     descripcion:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -36,7 +36,7 @@ const productos = [
     id: "4",
     categoria: "Animales",
     nombre: "Coneja",
-    img: "../assets/catalogo/animales/4Coneja.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314839/laTiendaDeVallosti/Animales/4Coneja_phdgto.jpg",
     precio: 1100,
     descripcion:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -47,7 +47,7 @@ const productos = [
     id: "5",
     categoria: "Animales",
     nombre: "Ovejas",
-    img: "../assets/catalogo/animales/5Ovejas.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314766/laTiendaDeVallosti/Animales/5Ovejas_llvg4t.jpg",
     precio: 2000,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -58,7 +58,7 @@ const productos = [
     id: "6",
     categoria: "Animales",
     nombre: "Jirafa",
-    img: "../assets/catalogo/animales/6JirafaAmarilla.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314839/laTiendaDeVallosti/Animales/6JirafaAmarilla_kqhsvt.jpg",
     precio: 1500,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -69,7 +69,7 @@ const productos = [
     id: "7",
     categoria: "Animales",
     nombre: "Oveja",
-    img: "../assets/catalogo/animales/7OvejaModelo3.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314764/laTiendaDeVallosti/Animales/9OvejaModelo2_x0id19.jpg",
     precio: 1800,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -80,7 +80,7 @@ const productos = [
     id: "8",
     categoria: "Animales",
     nombre: "Elefante",
-    img: "../assets/catalogo/animales/8Elefante.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314839/laTiendaDeVallosti/Animales/8Elefante_suncu9.jpg",
     precio: 1800,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -91,7 +91,7 @@ const productos = [
     id: "9",
     categoria: "Animales",
     nombre: "Dulce oveja",
-    img: "../assets/catalogo/animales/9OvejaModelo2.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314764/laTiendaDeVallosti/Animales/9OvejaModelo2_x0id19.jpg",
     precio: 1800,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -102,7 +102,7 @@ const productos = [
     id: "10",
     categoria: "Bebes",
     nombre: "Conjunto de manta de apego + sonajero de vaquita",
-    img: "../assets/catalogo/bebes/1ConjuntoVaca.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314931/laTiendaDeVallosti/Bebes/1ConjuntoVaca_rl3imu.jpg",
     precio: 2500,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -113,7 +113,7 @@ const productos = [
     id: "11",
     categoria: "Bebes",
     nombre: "Jirafa didáctica",
-    img: "../assets/catalogo/bebes/2JirafaDidactica.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314927/laTiendaDeVallosti/Bebes/2JirafaDidactica_qhtxiv.jpg",
     precio: 2300,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -124,7 +124,7 @@ const productos = [
     id: "12",
     categoria: "Bebes",
     nombre: "Oveja guarda pijama",
-    img: "../assets/catalogo/bebes/3OvejaGuardaPijama.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314928/laTiendaDeVallosti/Bebes/3OvejaGuardaPijama_lgn8fw.jpg",
     precio: 1600,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -135,7 +135,7 @@ const productos = [
     id: "13",
     categoria: "Bebes",
     nombre: "Manta de apego de Jirafa",
-    img: "../assets/catalogo/bebes/4MantaApegoJirafa.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314929/laTiendaDeVallosti/Bebes/4MantaApegoJirafa_mbrouj.jpg",
     precio: 1900,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -146,7 +146,7 @@ const productos = [
     id: "14",
     categoria: "Bebes",
     nombre: "Manta de apego de Hipopotamo",
-    img: "../assets/catalogo/bebes/5MantaApegoHipopotamo.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314930/laTiendaDeVallosti/Bebes/5MantaApegoHipopotamo_hvu0tq.jpg",
     precio: 1900,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -157,7 +157,7 @@ const productos = [
     id: "15",
     categoria: "Bebes",
     nombre: "Sonajero de Jirafa",
-    img: "../assets/catalogo/bebes/6SonajeroJirafa.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314953/laTiendaDeVallosti/Bebes/6SonajeroJirafa_xdsray.jpg",
     precio: 1800,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -168,7 +168,7 @@ const productos = [
     id: "16",
     categoria: "Personajes",
     nombre: "AmongUs del Hombre Araña",
-    img: "../assets/catalogo/personajes/1AmongUsSpiderman.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314986/laTiendaDeVallosti/Personajes/1AmongUsSpiderman_gmbfcg.jpg",
     precio: 2200,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -179,7 +179,7 @@ const productos = [
     id: "17",
     categoria: "Personajes",
     nombre: "Gnomo",
-    img: "../assets/catalogo/personajes/2Gnomo.jpg",
+    img: "https://res.cloudinary.com/dtxjhstme/image/upload/v1643314986/laTiendaDeVallosti/Personajes/2Gnomo_ryn0xe.jpg",
     precio: 1800,
     descripcion:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
@@ -188,12 +188,12 @@ const productos = [
   },
 ];
 
-export const getFetch = new Promise((resolve, reject) => {
-  if (true) {
-    setTimeout(() => {
-      resolve(productos);
-    }, 2000);
-  } else {
-    reject("Error");
-  }
-});
+// export const getFetch = new Promise((resolve, reject) => {
+//   if (true) {
+//     setTimeout(() => {
+//       resolve(productos);
+//     }, 2000);
+//   } else {
+//     reject("Error");
+//   }
+// });
