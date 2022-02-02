@@ -31,6 +31,9 @@ function Cart() {
                     )} 
                     <div className="finalCart">
                         <p className="precioTotal">Precio total ${precioTotal()} </p>
+                        <Link to={'/cart/checkOut'}>
+                            <Button variant="dark" className='vaciarCarrito'>Comprar</Button>
+                        </Link>
                         <Button variant="outline-dark" className='vaciarCarrito' onClick={vaciarCarrito}>Vaciar carrito</Button>
                     </div>                      
                 </div>
