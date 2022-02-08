@@ -1,3 +1,5 @@
+
+
 const productos = [
   {
     id: "1",
@@ -187,6 +189,7 @@ const productos = [
     stock: 5,
   },
 ];
+
 
 // export const getFetch = new Promise((resolve, reject) => {
 //   if (true) {

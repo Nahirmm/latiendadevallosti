@@ -13,10 +13,10 @@ function CheckOut() {
     const [condicional, setCondicional] = useState(false);
     
     const [formData , setFormData ] = useState({
-        email: '',
         name: '',
-        phone: '',
         lastName: '',
+        phone: '',
+        email: '',
     });
     
     const [idOrder, setIdOrder] = useState('');
@@ -43,8 +43,8 @@ function CheckOut() {
         
         const db = getFirestore()
 
-        const oredenCollection = collection(db, 'orders')
-        await addDoc(oredenCollection, order) 
+        const orderCollection = collection(db, 'orders')
+        await addDoc(orderCollection, order) 
         .then(resp => setIdOrder(resp.id))
         .catch(err => console.log(err))
         
