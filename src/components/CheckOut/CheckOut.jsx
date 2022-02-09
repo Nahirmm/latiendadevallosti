@@ -8,7 +8,7 @@ import { Button } from "react-bootstrap";
 
 function CheckOut() {
 
-    const { cartList, vaciarCarrito, precioTotal } = useCartContext()
+    const { cartList, emptyCart, totalPrice } = useCartContext()
     
     const [condicional, setCondicional] = useState(false);
     
@@ -21,7 +21,7 @@ function CheckOut() {
     
     const [idOrder, setIdOrder] = useState('');
 
-    const realizarCompra = async (e) => {
+    const makeAPurchase = async (e) => {
 
         e.preventDefault()   
         
@@ -29,15 +29,15 @@ function CheckOut() {
 
         order.date = Timestamp.fromDate(new Date())        
         order.buyer = formData 
-        order.total = precioTotal();
+        order.total = totalPrice();
 
         order.items = cartList.map(cartItem => {
             const id = cartItem.id;
-            const nombre = cartItem.nombre;
-            const precio = cartItem.precio * cartItem.cantidad;
-            const cantidad = cartItem.cantidad
+            const name = cartItem.name;
+            const price = cartItem.price * cartItem.quantity;
+            const quantity = cartItem.quantity
             
-            return {id, nombre, precio, cantidad}   
+            return {id, name, price, quantity}   
         }) 
 
         
@@ -49,16 +49,16 @@ function CheckOut() {
         .catch(err => console.log(err))
         
         const queryCollection = collection(db, 'items')
-        const queryActulizarStock = query(
+        const queryToUpdateStock = query(
             queryCollection, 
             where( documentId() , 'in', cartList.map(it => it.id))          
         ) 
 
         const batch = writeBatch(db)      
         
-        await getDocs(queryActulizarStock)
+        await getDocs(queryToUpdateStock)
         .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
-                stock: res.data().stock - cartList.find(item => item.id === res.id).cantidad
+                stock: res.data().stock - cartList.find(item => item.id === res.id).quantity
             }) 
         ))
         .catch(err => console.log(err))
@@ -67,8 +67,8 @@ function CheckOut() {
         batch.commit()
 
         setCondicional(true)    
-
-        vaciarCarrito()
+        
+        emptyCart()
     }
 
     function handleChange(e) {
@@ -119,7 +119,7 @@ function CheckOut() {
                         required
                     />
                     <Link to={'/cart/OrderProcessed'}>
-                        <Button variant="dark" onClick={realizarCompra}>Finalizar compra</Button>
+                        <Button variant="dark" onClick={makeAPurchase}>Finalizar compra</Button>
                     </Link>
                 </form>
                 )}

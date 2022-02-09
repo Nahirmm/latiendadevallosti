@@ -1,5 +1,6 @@
-import { BsCart4 } from 'react-icons/bs';
 import './CartWidget.css'
+import { BsCart4 } from 'react-icons/bs';
+
 
 function CartWidget() {
 

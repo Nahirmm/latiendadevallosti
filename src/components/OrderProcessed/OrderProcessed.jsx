@@ -1,4 +1,4 @@
-
+import './OrderProcessed.css'
 
 function OrderProcessed({ idOrder }) {
     

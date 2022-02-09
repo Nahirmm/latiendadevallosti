@@ -1,5 +1,5 @@
-import { Spinner as SpinnerBt} from 'react-bootstrap'
 import './Spinner.css'
+import { Spinner as SpinnerBt} from 'react-bootstrap'
 
 function Spinner() {
 

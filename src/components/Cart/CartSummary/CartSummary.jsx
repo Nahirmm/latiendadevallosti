@@ -6,7 +6,7 @@ import { useCartContext } from "../../../context/CartContext"
 
 function CartSummary() {
 
-    const { cartList, borrarItem } = useCartContext()
+    const { cartList, deleteItem } = useCartContext()
 
     return(
         <div>
@@ -23,12 +23,12 @@ function CartSummary() {
                 {cartList.map((prod) =>
                 <tbody key={prod.id}>
                     <tr>
-                    <td><img src={prod.img} alt={prod.nombre} /></td>
-                    <td>{prod.nombre}</td>
-                    <td>{prod.cantidad}</td>
-                    <td>${prod.precio}</td>
+                    <td><img src={prod.img} alt={prod.name} /></td>
+                    <td>{prod.name}</td>
+                    <td>{prod.quantity}</td>
+                    <td>${prod.price}</td>
                     <td>
-                        <button onClick={() => borrarItem(prod.id)} className="buttonTrashWidget">
+                        <button onClick={() => deleteItem(prod.id)} className="buttonTrashWidget">
                             <TrashWidget />
                         </button>
                     </td>

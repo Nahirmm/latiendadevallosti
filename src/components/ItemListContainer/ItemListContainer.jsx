@@ -1,5 +1,5 @@
 import './ItemListContainer.css'
-import ItemList from './ItemList'
+import ItemList from './ItemList/ItemList'
 import { useState , useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Spinner from '../Spinner/Spinner'
@@ -8,23 +8,21 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 
 function ItemListContainer({ greeting }) {
     
-    const [productos, setProductos] = useState([])
+    const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const {categoriaId} = useParams()
+    const {categoryId} = useParams()
 
     useEffect(() => {
 
-
-
-        if(categoriaId) {
+        if(categoryId) {
 
             const db = getFirestore()
-            const queryCollectionCategoria = query(collection(db, 'items'), 
-                where('categoria', '==', categoriaId)
+            const queryCollectioncategory = query(collection(db, 'items'), 
+                where('category', '==', categoryId)
             )
-            getDocs(queryCollectionCategoria)
-            .then(resp => setProductos( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ))
+            getDocs(queryCollectioncategory)
+            .then(resp => setProducts( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
 
@@ -33,34 +31,18 @@ function ItemListContainer({ greeting }) {
             const db = getFirestore()
             const queryCollection = query(collection(db, 'items'))
             getDocs(queryCollection)
-            .then(resp => setProductos( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ))
+            .then(resp => setProducts( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ))
             .catch(err => console.log(err))
             .finally(() => setLoading(false))
 
         }
 
-        // if (categoriaId) {
-
-        //     getFetch
-        // .then(answer => setProductos(answer.filter(prod => prod.categoria === categoriaId)))
-        // .catch(err => console.log(err))
-        // .finally(() => setLoading(false))
-
-        // } else {
-
-        //     getFetch
-        // .then(resp => setProductos(resp))
-        // .catch(err => console.log(err))
-        // .finally(() => setLoading(false))
-
-        // }
-
-    }, [categoriaId])
+    }, [categoryId])
 
     return (
         <div className='divItemListContainer'>
-            <h1 className='saludo'>{greeting}</h1>
-            { loading ? <Spinner /> : <ItemList productos={productos} /> }
+            <h1 className='greeting'>{greeting}</h1>
+            { loading ? <Spinner /> : <ItemList products={products} /> }
         </div>
     )
 }

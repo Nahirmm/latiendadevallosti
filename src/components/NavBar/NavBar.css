@@ -15,7 +15,7 @@ a {
     margin-left: 2rem;
 }
 
-.tituloNavBar {
+.titleNavBar {
     font-size: 2rem;
 }
 
@@ -30,7 +30,7 @@ a {
     flex-direction: row;
 }
 
-.globoItems {
+.balloonItems {
     font-size: 1.7rem;
     margin-left: 0.3rem;
 }

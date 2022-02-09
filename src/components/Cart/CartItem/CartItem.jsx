@@ -7,17 +7,17 @@ import CartSummary from './../CartSummary/CartSummary';
 
 function CartItem() {
 
-    const { vaciarCarrito, precioTotal } = useCartContext()
+    const { emptyCart, totalPrice } = useCartContext()
 
     return (
         <div className="cart">
             <CartSummary />
             <div className="finalCart">
-                <p className="priceTotal">Precio total ${precioTotal()} </p>
+                <p className="priceTotal">Precio total ${totalPrice()} </p>
                 <Link to={'/cart/checkOut'}>
                     <Button variant="dark" className='buttonCartItem'>Comprar</Button>
                 </Link>
-                <Button variant="outline-dark" className='buttonCartItem buttonCartItem2' onClick={vaciarCarrito}>Vaciar carrito</Button>
+                <Button variant="outline-dark" className='buttonCartItem buttonCartItem2' onClick={emptyCart}>Vaciar carrito</Button>
             </div>                      
         </div>
     );
