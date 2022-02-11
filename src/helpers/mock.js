@@ -1,4 +1,5 @@
-//import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+const firestore = require('firebase/firestore');
+const firbaseApp = require('firebase/app');
 
 const products = [
   {
@@ -10,7 +11,7 @@ const products = [
     description:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @jesshuffco",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "2",
@@ -21,7 +22,7 @@ const products = [
     description:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @venelopatoys",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "3",
@@ -32,7 +33,7 @@ const products = [
     description:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @fookolki",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "4",
@@ -43,7 +44,7 @@ const products = [
     description:
       "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @rochi_tejidosartesanales",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "5",
@@ -54,7 +55,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @_petitbonnet_",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "6",
@@ -65,7 +66,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @gatomiacrochetaria",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "7",
@@ -76,7 +77,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @anat_tzach",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "8",
@@ -87,7 +88,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @sweetoddityart",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "9",
@@ -98,7 +99,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @amalou.designs",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "10",
@@ -109,7 +110,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @ovejita.tejedora",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "11",
@@ -120,7 +121,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @sparrow.dreamer",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "12",
@@ -131,7 +132,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @anastasiya__vokhmina",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "13",
@@ -142,7 +143,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @gatomiacrochetaria",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "14",
@@ -153,7 +154,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @gracielagaudi",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "15",
@@ -164,7 +165,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @gatomiacrochetaria",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "16",
@@ -175,7 +176,7 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @lennutas",
-    stock: 5,
+    stock: 100,
   },
   {
     id: "17",
@@ -186,17 +187,34 @@ const products = [
     description:
     "Todas las fotos son trabajos realizados por mí, no utilizo fotos ilustrativas de internet. Utilizo hilo de algodón sedificado hipoalergénico, rellenos con vellón siliconado, para que no se deformen y en algunos se utilizan ojos de seguridad. Podes pedirme el color, según disponibilidad de stock, que prefieras. La entrega dependerá de la demanda que tenga en el momento. ",
     pattern: "Diseño de @latiendadevallosti",
-    stock: 5,
+    stock: 100,
   },
 ];
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDPVz4b68UTlrPMuQqMqPuhILkk3qVosUs",
+  authDomain: "la-tienda-de-vallosti.firebaseapp.com",
+  projectId: "la-tienda-de-vallosti",
+  storageBucket: "la-tienda-de-vallosti.appspot.com",
+  messagingSenderId: "1052989597550",
+  appId: "1:1052989597550:web:3efa838a927531a1ce437f"
+};
 
-// const uploadItems = () => {
+// Initialize Firebase
 
-//   const db = getFirestore()
 
-//   const orderCollection = collection(db, 'items')
-//   await addDocs(orderCollection, items) 
-//   .then(resp => setIdOrder(resp.id))
-//   .catch(err => console.log(err))
-// }
+const uploadItems = () => {
+
+  const app = firbaseApp.initializeApp(firebaseConfig)
+  const db = firestore.getFirestore(app)
+  const itemCollection = firestore.collection(db, 'items')
+  
+  products.forEach(item => {
+    firestore.addDoc(itemCollection, item) 
+    .then(resp => console.log(resp.id))
+    .catch(err => console.log(err))
+  })
+}
+
+uploadItems()

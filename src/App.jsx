@@ -17,8 +17,8 @@ function App() {
             <NavBar />
             <Routes>
               <Route exact path='/' element={<ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />} />
-              <Route exact path='/categoria/:categoriaId' element={<ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />} />
-              <Route exact path='/item/:detalleId' element={<ItemDetailContainer />} />
+              <Route exact path='/categoria/:categoryId' element={<ItemListContainer greeting='Bienvenidxs a nuestra tienda!' />} />
+              <Route exact path='/item/:detailId' element={<ItemDetailContainer />} />
               <Route exact path='/cart' element={<Cart />} />
               <Route exact path='/cart/checkOut' element={<CheckOut />} />
               <Route exact path='/cart/orderProcessed' element={<OrderProcessed />} />
