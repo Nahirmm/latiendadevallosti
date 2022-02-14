@@ -1,4 +1,4 @@
-# E-commerce 'La Tienda de Vallosti'\ Proyecto final del curso de ReactJs de CoderHouse
+# E-commerce 'La Tienda de Vallosti'
 
 ## Proyecto final para el curso de ReactJs de CoderHouse
 
