@@ -2,7 +2,7 @@ import './Item.css';
 import { Card, Button } from "react-bootstrap"
 import { Link } from 'react-router-dom'
 
-function Item({ id, name, img, price }) {
+function Item({ idx, name, img, price }) {
 
     return (
 
@@ -13,7 +13,7 @@ function Item({ id, name, img, price }) {
                     <Card.Title>{name}</Card.Title>
                     <Card.Text className='pCardPrice'>${price}</Card.Text>
                     <div className='divButtonCardItem'>
-                        <Link to={`/item/${id}`}><Button variant="dark" className='buttonCardItem'>Detalle del producto</Button></Link>
+                        <Link to={`/item/${idx}`}><Button variant="dark" className='buttonCardItem'>Detalle del producto</Button></Link>
                     </div>
                 </Card.Body>
             </Card>

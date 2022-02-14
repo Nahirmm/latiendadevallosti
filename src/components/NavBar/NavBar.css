@@ -1,5 +1,5 @@
 .divNavBar {
-    background-color: #F8F9FA;
+    background-image: linear-gradient(#F8F9FA, white);
     display: flex;
     justify-content: space-between;
     align-items: center;

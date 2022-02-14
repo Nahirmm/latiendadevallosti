@@ -17,6 +17,7 @@ function CartSummary() {
                     <th>Producto</th>
                     <th>Cantidad</th>
                     <th>Precio</th>
+                    <th>Subtotal</th>
                     <th>Remover</th>
                     </tr>
                 </thead>
@@ -27,6 +28,7 @@ function CartSummary() {
                     <td>{prod.name}</td>
                     <td>{prod.quantity}</td>
                     <td>${prod.price}</td>
+                    <td>${prod.price * prod.quantity}</td>
                     <td>
                         <button onClick={() => deleteItem(prod.id)} className="buttonTrashWidget">
                             <TrashWidget />

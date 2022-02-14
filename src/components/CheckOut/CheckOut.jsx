@@ -1,9 +1,12 @@
+import './CheckOut.css'
 import { useCartContext } from "../../context/CartContext"
 import { addDoc, collection, Timestamp, documentId, getDocs, getFirestore, query, where, writeBatch } from "firebase/firestore"
 import { useState } from "react"
 import OrderProcessed from "../OrderProcessed/OrderProcessed";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import Spinner from '../Spinner/Spinner'
+
 
 
 function CheckOut() {
@@ -11,6 +14,7 @@ function CheckOut() {
     const { cartList, emptyCart, totalPrice } = useCartContext()
     
     const [condicional, setCondicional] = useState(false);
+    const [loading, setLoading] = useState(false)
     
     const [formData , setFormData ] = useState({
         name: '',
@@ -40,7 +44,7 @@ function CheckOut() {
             return {id, name, price, quantity}   
         }) 
 
-        
+        setLoading(true)
         const db = getFirestore()
 
         const orderCollection = collection(db, 'orders')
@@ -66,6 +70,7 @@ function CheckOut() {
 
         batch.commit()
 
+        setLoading(false)
         setCondicional(true)    
         
         emptyCart()
@@ -78,13 +83,10 @@ function CheckOut() {
         })
     }
 
-    return (
-        <div>
-            { 
-                condicional ? (<OrderProcessed idOrder={idOrder} />
-
-                ):(
-                    
+    const getForm = () => {
+        return(   
+            <div>
+                <h4>Por favor complete el siguiente formulario para finalizar su compra:</h4>
                 <form onChange={handleChange}>
                     <input 
                         type="text" 
@@ -118,11 +120,26 @@ function CheckOut() {
                         value={formData.phone}
                         required
                     />
-                    <Link to={'/cart/OrderProcessed'}>
-                        <Button variant="dark" onClick={makeAPurchase}>Finalizar compra</Button>
+                    <Link to={'/cart/orderProcessed'}>
+                        <Button variant="dark" onClick={makeAPurchase}>
+                            Finalizar compra
+                            </Button>
                     </Link>
                 </form>
-                )}
+            </div>
+            )
+    }
+
+    const enableButtonCondition = () => {
+        return formData.phone && formData.email && formData.lastName && formData.name
+    }
+
+    return (
+        <div>
+            { 
+                condicional ? (<Navigate to= {`/cart/orderProcessed/${idOrder}`} /> )
+                    : ( loading ? <Spinner /> : getForm())
+            }
         </div>
     );
 }

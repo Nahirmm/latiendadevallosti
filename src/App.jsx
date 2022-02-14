@@ -21,7 +21,7 @@ function App() {
               <Route exact path='/item/:detailId' element={<ItemDetailContainer />} />
               <Route exact path='/cart' element={<Cart />} />
               <Route exact path='/cart/checkOut' element={<CheckOut />} />
-              <Route exact path='/cart/orderProcessed' element={<OrderProcessed />} />
+              <Route exact path='/cart/orderProcessed/:idOrder' element={<OrderProcessed />} />
             </Routes>
         </BrowserRouter>
       </CartContextProvider>
