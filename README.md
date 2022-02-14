@@ -33,7 +33,7 @@ Una vez que se hayan descargado las dependencias, ejecutar `npm start`.
 
 ## Demo
 
-
+[https://latiendadevallosti.netlify.app/](https://latiendadevallosti.netlify.app/)
 
 ## Autor
 
