@@ -2,8 +2,7 @@ import './CheckOut.css'
 import { useCartContext } from "../../context/CartContext"
 import { addDoc, collection, Timestamp, documentId, getDocs, getFirestore, query, where, writeBatch } from "firebase/firestore"
 import { useState } from "react"
-import OrderProcessed from "../OrderProcessed/OrderProcessed";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Spinner from '../Spinner/Spinner'
 
@@ -94,7 +93,6 @@ function CheckOut() {
                         placeholder="Nombres"
                         onChange={handleChange}
                         value={formData.name}
-                        required
                     />
                     <input 
                         type="text" 
@@ -102,7 +100,6 @@ function CheckOut() {
                         placeholder="Apellidos"
                         onChange={handleChange}
                         value={formData.lastName}
-                        required
                     />
                     <input 
                         type="email" 
@@ -110,7 +107,6 @@ function CheckOut() {
                         placeholder="Email"
                         onChange={handleChange}
                         value={formData.email}
-                        required
                     />
                     <input 
                         type="number" 
@@ -118,21 +114,19 @@ function CheckOut() {
                         placeholder="Telefono"
                         onChange={handleChange}
                         value={formData.phone}
-                        required
                     />
-                    <Link to={'/cart/orderProcessed'}>
-                        <Button variant="dark" onClick={makeAPurchase}>
-                            Finalizar compra
-                            </Button>
-                    </Link>
+                    <Button variant="dark" disabled={!enableButtonCondition()} onClick={makeAPurchase}>
+                        Finalizar compra
+                    </Button>
                 </form>
             </div>
             )
     }
 
     const enableButtonCondition = () => {
-        return formData.phone && formData.email && formData.lastName && formData.name
+        return formData.phone && formData.email && formData.lastName && formData.name && (/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(formData.email)) && (/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(formData.name)) && (/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(formData.lastName))
     }
+
 
     return (
         <div>

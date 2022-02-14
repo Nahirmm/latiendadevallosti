@@ -14,7 +14,7 @@ function NavBar() {
             <Link to={`/`}><img src={logo} alt="logo" className="logo" /></Link>
             <Link to={`/`} className='titleNavBar'>La tienda de Vallosti</Link>
             <NavLink to={`/categoria/Animales`} className="navLinkNavBar">Animales</NavLink>
-            <NavLink to={`/categoria/Bebes`} className="navLinkNavBar">Bebes</NavLink>
+            <NavLink to={`/categoria/Bebes`} className="navLinkNavBar">Bebés</NavLink>
             <NavLink to={`/categoria/Personajes`} className="navLinkNavBar">Personajes</NavLink>
             <Link to={`/cart`} className='cartNavBar'>
                 <CartWidget />
