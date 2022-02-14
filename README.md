@@ -37,6 +37,6 @@ Una vez que se hayan descargado las dependencias, ejecutar `npm start`.
 
 ## Autor
 
-Nahir Massetani Maidanik\ [Linkedin](https://www.linkedin.com/in/nahir-massetani-maidanik-75441321a/)
+Nahir Massetani Maidanik [Linkedin](https://www.linkedin.com/in/nahir-massetani-maidanik-75441321a/)
 
 
