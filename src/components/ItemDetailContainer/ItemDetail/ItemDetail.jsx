@@ -23,6 +23,7 @@ function ItemDetail({ product }) {
             <img src={product.img} alt={product.name} className='imgDetail'/>
             <div>
                 <h2>{product.name}</h2>
+                <p>Categoría: {product.category} </p>
                 <p className='pDescriptionDetail'>{product.description}</p>
                 <p className='pPatternDetail'>{product.pattern}</p>
                 <h4 className='priceDetail'>Precio: ${product.price}</h4>

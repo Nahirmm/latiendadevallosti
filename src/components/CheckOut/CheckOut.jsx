@@ -20,6 +20,7 @@ function CheckOut() {
         lastName: '',
         phone: '',
         email: '',
+        confirmEmail: '',
     });
     
     const [idOrder, setIdOrder] = useState('');
@@ -108,6 +109,13 @@ function CheckOut() {
                         onChange={handleChange}
                         value={formData.email}
                     />
+                     <input 
+                        type="email" 
+                        name="confirmEmail"
+                        placeholder="Ingrese nuevamente su email"
+                        onChange={handleChange}
+                        value={formData.confirmEmail}
+                    />
                     <input 
                         type="number" 
                         name="phone"
@@ -124,7 +132,7 @@ function CheckOut() {
     }
 
     const enableButtonCondition = () => {
-        return formData.phone && formData.email && formData.lastName && formData.name && (/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(formData.email)) && (/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(formData.name)) && (/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(formData.lastName))
+        return formData.phone && formData.email && formData.lastName && formData.name && (/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(formData.email)) && (/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(formData.name)) && (/^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/.test(formData.lastName)) && formData.email === formData.confirmEmail
     }
 
 
