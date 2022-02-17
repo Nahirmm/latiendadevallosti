@@ -8,7 +8,7 @@ Se realizó una app web, con el objetivo de vender amigurumis (peluches tejidos 
 En la página principal se encuentran todos los productos en venta, se puede navegar por tres distintas categorías: Animales, Bebés y Personajes.\
 Cada producto tiene un botón para acceder a la información de éste, donde se selecciona la cantidad de productos que se desee comprar (validado según stock) y el botón de agregar al carrito, el cual te genera dos botones 'Seguir comprando', te lleva a la página principal, y 'Terminar compra', te llevar al carrito.\
 Cuando el carrito está vacío te muestra una leyenda junto con el botón para ir a la tienda. En caso de que tenga productos, muestra un detalle de lo seleccionado junto con los subtotales, el total y tiene las opciones de eliminar un item, vaciar el carrito o comprar. Cuando el usuario clickea en comprar, se muestra un formulario el cual es requerido para poder completar la compra y así mostrar la orden procesada junto con el id otorgado por Firebase, donde se guarda la orden generada.\
-A su vez, una vez que se procedió a la compra, el stock es actualizado automáticamente en firebase.
+A su vez, cuando se finalice la compra, el stock es actualizado automáticamente en firebase.
 
 ## Instalación
 
@@ -37,6 +37,6 @@ Una vez que se hayan descargado las dependencias, ejecutar `npm start`.
 
 ## Autor
 
-Nahir Massetani Maidanik\ [Linkedin](https://www.linkedin.com/in/nahir-massetani-maidanik-75441321a/)
+Nahir Massetani Maidanik [Linkedin](https://www.linkedin.com/in/nahir-massetani-maidanik-75441321a/)
 
 
