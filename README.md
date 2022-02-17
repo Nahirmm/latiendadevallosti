@@ -23,13 +23,13 @@ Una vez que se hayan descargado las dependencias, ejecutar `npm start`.
 ## Dependencias
 
 * react version 17.0.2
-* react-bootstrap version 2.0.4
 * react-dom version 17.0.2
-* react-icons version 4.3.1
 * react-router-dom version 6.2.1
 * react-scripts version 5.0.0
-* bootstrap version 5.1.3
-* firebase version 9.6.4
+* react-icons version 4.3.1, utilizado para los iconos de carrito y eliminar item.
+* react-bootstrap version 2.0.4, utilizado para darle estilo.
+* bootstrap version 5.1.3, utilizado para darle estilo.
+* firebase version 9.6.4, utilizado como base de datos para items y orders.
 
 ## Demo
 
